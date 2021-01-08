@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+              Title="MeetUps"
+             x:Class="Buddiegram.Views.MeetupTab">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Create" Activated="RefButtonClicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+
+
+        <ListView ItemSelected="OnItemSelected">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Barbeque Party</x:String>
+                    <x:String>Birthday Party</x:String>
+                    <x:String>Road Trip</x:String>
+                    <x:String>Trekking</x:String>
+                   
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

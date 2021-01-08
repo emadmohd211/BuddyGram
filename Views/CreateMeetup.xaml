@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Buddiegram.Views.CreateMeetup">
+   
+        <ContentPage.ToolbarItems>
+            <ToolbarItem Text="Create" Activated="CreateButtonClicked"></ToolbarItem>
+        </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid
+        RowSpacing="0"
+        ColumnSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="9*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+
+            <BoxView 
+            Grid.Row="0"
+            />
+
+
+           
+
+            <StackLayout                
+            Grid.Row="1"
+            VerticalOptions="Fill"
+            HorizontalOptions="Center"
+            Spacing="15">
+
+              <StackLayout HorizontalOptions="Center" Spacing="4">
+                    <Label 
+                    Text="MeetUp Name:" />
+                    <Entry 
+                    Text="{ Binding Mname }"
+                    WidthRequest="300" />
+                </StackLayout>
+               
+                <BoxView HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="Black" />
+                <Label 
+                    Text="Added Participants" />
+                <ListView  x:Name="listView" ItemsSource="{Binding selectedContacts}"  >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout 
+                        Orientation="Vertical" BackgroundColor="White">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Name}" TextColor="Black" FontAttributes="Bold"  Padding="3,5,0,0"/>
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
+             xmlns:controls1="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             mc:Ignorable="d"
+             Title="Profile"
+             x:Class="Buddiegram.Views.ProfilePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Done" ></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <StackLayout >
+
+                <controls1:CircleImage x:Name="image" Source="profile.jpg" Aspect="Fill" WidthRequest="120" HeightRequest="120" TranslationX="0" TranslationY="20" BorderColor="Black" BorderThickness="2"  VerticalOptions="Center" HorizontalOptions="Center"  />
+
+
+                <StackLayout Padding="15" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ProfilePictureChangeTapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <Label Text="Change Profile Picture" TranslationX="1"  VerticalOptions="Center" HorizontalOptions="Center" TextColor="Blue" >
+                    </Label> 
+                        </StackLayout >
+                        </StackLayout>
+            <StackLayout  >
+                <BoxView HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="Black" TranslationY="23" />
+                <Label 
+                    Text="Name:"   TranslationY="32"/>
+                <Entry 
+                    Text="John Parker" 
+                    WidthRequest="100" IsEnabled="False" TranslationY="34" />
+                <Label 
+                    Text="Email:" TranslationY="36" />
+                <Entry 
+                    Text="john@gmail.com" 
+                    WidthRequest="100" IsEnabled="False" TranslationY="38"/>
+                <Label 
+                    Text="Phone Number:" TranslationY="40"/>
+                <Entry 
+                    Text=" 01128288888 " 
+                    WidthRequest="100" IsEnabled="False" TranslationY="42"/>
+              
+            </StackLayout>
+        </StackLayout>
+      
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Event information"
+             x:Class="Buddiegram.Views.EventMainPage">
+    <ContentPage.Content>
+        <Grid
+        RowSpacing="0"
+        ColumnSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6*" />
+                <RowDefinition Height="6*" />
+                
+            </Grid.RowDefinitions>
+            
+            
+
+
+          
+
+            <StackLayout                
+            Grid.Row="0"
+            VerticalOptions="Fill"
+            HorizontalOptions="Center"
+            >
+
+                <StackLayout HorizontalOptions="Center" Spacing="5">
+                    <Label 
+                    Text="EventName:" FontSize="Medium" />
+                    <Label 
+                    Text="Barbeque Party" 
+                    WidthRequest="300" />
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center" Spacing="5">
+                    <Label 
+                    Text="Event Date:" FontSize="Medium"/>
+                    <Label 
+                    Text="20/10/20"
+                    WidthRequest="300"
+                    />
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" Spacing="5">
+                    <Label 
+                    Text="Event Time:" FontSize="Medium"/>
+                    <Label 
+                    Text="2:00 pm"
+                    WidthRequest="300"
+                    />
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" Spacing="5">
+                    <Label 
+                    Text="Event Location:" FontSize="Medium"/>
+                    <Label 
+                    Text="20/10/20"
+                    WidthRequest="300"
+                    />
+                </StackLayout>
+            </StackLayout>
+
+
+
+            <StackLayout                
+            Grid.Row="1"
+            VerticalOptions="Fill"
+            HorizontalOptions="Center"
+            >
+               <!-- <BoxView HeightRequest="6" HorizontalOptions="FillAndExpand" BackgroundColor="Black"  /> -->
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"  />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--   <BoxView Grid.Row="0" Grid.Column="0" BackgroundColor="White" /> -->
+                    <Image
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Source="gallary.png"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                       />
+                    <!--   <BoxView Grid.Row="0" Grid.Column="1" BackgroundColor="White" /> -->
+                    <Image
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Source="groupChat.png"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        />
+                  
+
+                </Grid>
+
+            </StackLayout>
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

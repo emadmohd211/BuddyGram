@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Buddiegram.Views.MainTabbedPage"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            xmlns:local="clr-namespace:Buddiegram.Views"
+        
+            >
+    <!--Pages can be added as references or inline
+  //<ContentPage Title="Contact List" />     android:TabbedPage.ToolbarPlacement="Bottom"
+  <ContentPage Title="Tab 2" />
+  <ContentPage Title="Tab 3" /> e
+   // <local:ContactListTab Title="Contacts" />
+    <local:ContactListTab Title="Contacts" Icon="contacts.png"></local:ContactListTab>
+     <local:MeetupTab Title="Meetups" Icon="meetup.png" />
+    <local:SettingsTab  Title="Settings" Icon="settings.png"/>
+     <local:AttendedTab Title="Attended" Icon="attended.png"/>
+    <local:OwnedTab Title="Owned" Icon="owned.png" />
+    -->
+    <NavigationPage Title="Contacts" IconImageSource="contacts.png">
+        <x:Arguments>
+            <local:ContactListTab />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Meetups" IconImageSource="meetup.png">
+        <x:Arguments>
+            <local:MeetupTab />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Attended" IconImageSource="attended.png">
+        <x:Arguments>
+            <local:AttendedTab />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Owned" IconImageSource="owned.png">
+        <x:Arguments>
+            <local:OwnedTab />
+        </x:Arguments>
+    </NavigationPage>
+  
+    
+    <NavigationPage Title="Settings" IconImageSource="settings.png">
+        <x:Arguments>
+            <local:SettingsTab />
+        </x:Arguments>
+    </NavigationPage>
+    <!--  <NavigationPage Title="Schedule" IconImageSource="schedule.png">
+        <x:Arguments>
+            <local:ContactListTab />
+        </x:Arguments>
+    </NavigationPage> -->
+   
+</TabbedPage>

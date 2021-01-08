@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Buddiegram.ViewModels"
+             mc:Ignorable="d"  x:Class="Buddiegram.Views.ContactList"
+             Title="Add Invitees"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Next"   Command="{ Binding NextButtonCommand }"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar x:Name="filterText"
+                        HeightRequest="40"
+                        Text="{Binding SearchText}" />
+            <ListView  x:Name="listView" ItemsSource="{Binding FilteredContacts}"  ItemSelected="listView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout 
+                        Orientation="Vertical" BackgroundColor="White">
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox IsChecked="{Binding IsChecked}" Color="Black" ></CheckBox>
+                                    <Label Text="{Binding Name}" TextColor="Black" FontAttributes="Bold"  Padding="3,5,0,0"/>
+
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
